@@ -1,0 +1,195 @@
+body {
+	margin: 8px;
+	font-family: monospace;
+}
+.header {
+	h1 {
+		font-size: 32px;
+		font-weight: bold;
+		margin: 10px 0 25px;
+		font-family: serif;
+	}
+	ul {
+		width: 100%;
+
+		li {
+			display: inline-block;
+		}
+		li:nth-child(4), li:nth-child(5), li:nth-child(6) {
+			float: right;
+			margin-left: 20px;
+		}
+	}
+}
+.line {
+	margin: 8px 0;
+}
+.posts {
+	tr {
+		line-height: 25px;
+	}
+	tr > td {
+		text-align: left;
+		padding-right: 15px;
+	}
+}
+.footer {
+	p {
+		font-family: serif;
+		font-style: italic;
+	}
+	.counter {
+		float: right;
+	}
+}
+
+// MARKDOWN
+
+.post_content {
+
+	p {
+		line-height: 150%;
+		margin-bottom: 15px;
+	}
+
+	a {
+		margin-bottom: 15px;
+	}
+
+	h1 {
+		font-size: 20px;
+		font-weight: 700;
+		margin: 50px 0 10px 0;
+	}
+
+	h2 {
+		font-size: 18px;
+		font-weight: 700;
+		margin: 25px 0 5px 0;
+	}
+
+	em {
+		font-style: italic;
+	}
+
+	blockquote {
+		padding: 0 0 0 15px;
+		margin: 15px 5px;
+		border-left: 8px solid #000000;
+	}
+
+	strong {
+		font-weight: 700;
+	}
+
+	hr {
+		border-top: 3px solid #333333;
+		border-left: 0;
+	}
+
+	ul {
+		list-style: square;
+		margin: 0 0 15px 30px;
+
+		li {
+			padding: 5px;
+
+			ul {
+				margin: 10px 0 0 15px;
+
+				li {
+					padding: 5px;
+				}
+			}
+		}
+	}
+
+	ol {
+		list-style: decimal-leading-zero;
+		margin: 0 0 15px 30px;
+
+		li {
+			padding: 5px;
+
+			ul {
+				margin: 10px 0 0 15px;
+
+				li {
+					padding: 5px;
+				}
+			}
+		}
+	}
+
+	table, th, td {
+		border: 1px solid #222222;
+		padding: 2px;
+	}
+
+	pre {
+		margin-bottom: 15px;
+	}
+}
+
+// END MARKDOWN
+
+.title {
+	margin-top: 25px !important;
+}
+.hljs {
+	background: rgba(0, 0, 0, 0);
+}
+.donate {
+	width: 100%;
+	float: right;
+	padding: 0 3px 0 0;
+	margin-bottom: 20px;
+
+	p {
+		text-align: right;
+		word-break: break-word;
+	}
+}
+@media only screen and (max-width: 990px) {
+	.header {
+		h1 {
+			font-size: 25px;
+		}
+		ul {
+			li:nth-child(4), li:nth-child(5), li:nth-child(6) {
+				position: absolute;
+				right: 5px;
+			}
+			li:nth-child(6) {
+				top: 5px;
+			}
+			li:nth-child(5) {
+				top: 22px;
+			}
+			li:nth-child(4) {
+				top: 39px;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 470px) {
+	.header {
+		h1 {
+			font-size: 20px;
+		}
+	}
+}
+@media only screen and (max-width: 385px) {
+	.header {
+		h1 {
+			font-size: 17px;
+		}
+	}
+}
+@media only screen and (max-width: 337px) {
+	.header {
+		h1 {
+			font-size: 15px;
+		}
+	}
+}
