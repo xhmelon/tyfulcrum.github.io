@@ -1,6 +1,6 @@
 permalink: /:year:month:day/:title
 url: https://tyfulcrum.github.io
-#baseurl: 
+baseurl: 
 
 # variables
 name: tyfulcrum
