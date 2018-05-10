@@ -1,25 +1,25 @@
-permalink: /:year:month:day/:title
-url: https://tyfulcrum.github.io
-baseurl: '/'
+# Site settings
+title: "宇宙尽头的餐馆"
+author: "Thomas Yang"
+description: "碎碎念与清谈。"
+keywords: ""
+biography: "不愿被标签化的无业游民。"
+colophon: "若无说明，本站原创内容均以<a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>知识共享许可协议（BY-NC-SA）</a>发布。"
+techinfo: "本站托管于<a href='https://pages.github.com/'>Github Pages</a>并基于<a href='https://jekyllrb.com/'>Jekyll</a>模板<a href='https://github.com/hugoferreira/papyrus-theme'>Papyrus</a>搭建。"
+privacy: "本站使用了<a href='https://www.google.com/analytics/'>Google Analytics</a>以便我统计信息。如果你认为隐私被侵犯，不妨使用<a href='https://www.eff.org/privacybadger'>隐私獾</a>。"
+baseurl: ""
+url: "https://tyfulcrum.github.io"
 
-# variables
-name: tyfulcrum
-description: things
-google_verification: null
+email: tyfulcrum@gmail.com
+twitter_username: tyfulcrum
+mastodon_address: https://pawoo.net/@tyfulcrum
+github_username: tyfulcrum
+keybase_username: tyfulcrum
+#linkedin_username: hugoserenoferreira
+#facebook_username: hugo.sereno.ferreira
+#google-analytics: UA-69060-5
 
-
-# File management
-include: [".htaccess"]
-exclude: ["README.md", "LICENSE"]
-
-# Sass
-sass:
-  style: :compressed
-  sass_dir: _sass
-
-# Markdown
+simple_search: https://google.com/search
 markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter_opts:
-    disable : true
+highlighter: rouge
+permalink: /blog/:year/:month/:day/:title/

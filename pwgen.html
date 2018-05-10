@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <title>密码生成器</title>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jshashes/1.0.7/hashes.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+  </head>
+  <body>
+    <center>
+      <h2>密码生成器</h1>
+      <table cellspacing="0" border="0">
+        <tr>
+          <td width="40"><span>账号</span></td>
+          <td>
+            <input id="count" type="text" placeholder="username@website.com">
+          </td>
+        </tr>
+        <tr>
+          <td><span>密钥</span></td>
+          <td>
+            <input id="hmac" type="password" placeholder="1password"></td>
+        </tr>
+        <tr>
+          <td><span>明文</span></td>
+          <td>
+            <input type="checkbox" onchange="document.getElementById('hmac').type = this.checked ? 'text' : 'password'"></td>
+        </tr>
+        <tr>
+          <td><span>长度</span></td>
+          <td>
+            <input id="length" type="number" placeholder="less than 1 is invalid!">
+          </td>
+          <tr>
+            <td colspan="2">
+              <button onclick="gen()">生成</button>
+              <button class="btn" data-clipboard-target="#result">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/clippy.svg" alt="Copy to clipboard">
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <span id="result"></span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <span id="result1"></span>
+            </td>
+          </tr>
+      </table>
+    </center>
+  </body>
+  <script type="text/javascript">
+
+    (function(){
+      var clipboard = new ClipboardJS('.btn');
+
+      clipboard.on('success', function(e) {
+        e.clearSelection();
+      });
+
+      function $(id) {
+        return document.getElementById(id);
+      }
+      var length = $('length');
+      var hmac = $('hmac');
+      var content = $('count');
+      var t = "SHA512";
+      var value = length.valueAsNumber;
+      window.gen = function() {
+        if (typeof Hashes[t] === 'function') {
+          var encrpty = new Hashes[t];
+          var str = (content.value || '').trim().toLowerCase();
+          if (str) {
+            var key = (hmac.value || '').trim();
+            if (key) {
+              var pwd = encrpty.b64_hmac(key, str);
+              pwd1 = pwd.replace(/\W/g, '').substring(0, length.valueAsNumber);
+              pwd = pwd.replace(/\W|[Il1o0O]/g, '');
+              for (var i = 3; i<length.valueAsNumber; i=i+4) {
+          pwd = pwd.substring(0, i) + "_" + pwd.substring(i+1);
+          }					
+          $('result').innerHTML = pwd.substring(0, length.valueAsNumber);
+          $('result1').innerHTML = pwd1;
+          localStorage.setItem('_1pwd_type_', t);
+          localStorage.setItem('_1pwd_leng_', length.valueAsNumber);
+          }
+          }
+          }
+          };
+          })();
+  </script>
+</html>

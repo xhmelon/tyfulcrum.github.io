@@ -1,0 +1,53 @@
+<footer>
+  <div class="container">
+    <div class="row biography">
+      <div class="col-sm-4">
+        <h2>我是谁？</h2>
+        <p>{{ site.biography }}</p>
+      </div>
+      <div class="col-sm-4">
+        <h2>这里有什么？</h2>
+        <p>{{ site.description }}</p>
+      </div>
+      <div class="col-sm-4">
+        <h2>还能在哪儿找到我？</h2>
+          {% if site.email %}
+            <a href="mailto:{{ site.email }}" title="E-Mail">
+              <i class="fas fa-envelope"></i>
+            </a>
+          {% endif %}
+          {% if site.github_username %}
+            <a href="https://github.com/{{ site.github_username }}" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          {% endif %}
+          {% if site.twitter_username %}
+            <a href="https://twitter.com/{{ site.twitter_username }}" title="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+          {% endif %}
+          {% if site.mastodon_address %}
+            <a href="{{ site.mastodon_address }}" title="Mastodon">
+              <i class="fab fa-mastodon"></i>
+            </a>
+          {% endif %}
+          {% if site.keybase_username %}
+            <a href="https://keybase.io/{{ site.keybase_username }}" title="Keybase (PGP Key)">
+              <i class="fab fa-keybase"></i>
+            </a>
+          {% endif %}
+      </div>
+    </div>
+    <div class="row copyright">
+    {% if site.colophon %}
+      <center>{{ site.colophon }}</center>
+    {% endif %}
+    {% if site.techinfo%}
+      <center>{{ site.techinfo }}</center>
+    {% endif %}
+    {% if site.google-analytics %}
+      <center>{{ site.privacy }}</center>
+    {% endif %}
+    </div>
+  </div>
+</footer>

@@ -1,32 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	{% if page.title %}
-	<meta name="description" content="{{ page.content | truncate: 160 | strip_html | strip_newlines }}">
-	{% endif %}
-	{%if page.tags %}
-	<meta name="keywords" content="{{ page.tags | join: ', ' | escape }}"/>
-	{% else %}
-	<meta name="keywords" content="python, javascript, html, css, theme, modification, jekyll, script"/>
-	{%endif %}
-    <meta name="theme-color" content="#000000" />
-    {% if page.title or page.title == 'me' %}
-        <title>{{ site.url }}{{ page.url }}</title>
-    {% else %}
-        <title>Index of {{ site.name }}{{ page.url }}</title>
-    {% endif %}
-	<link rel="stylesheet" type="text/css" href="/assets/css/atom-one-light.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/001.css">
-	<link rel="canonical" href="{{ site.url }}{{ page.url }}">
-</head>
-<body>
-	{{ content }}
-	<hr class="line">
-	<div class="footer">
-		<p>{{ site.url }}</p>
-	</div>
-</body>
+  {% include head.html %}
+  <body>
+    {{ content }}
+    {% include footer.html %}
+  </body>
 </html>
