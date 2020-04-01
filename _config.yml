@@ -1,16 +1,16 @@
 # Site settings
-title: "宇宙尽头的餐馆"
-author: "Thomas Yang"
-description: "碎碎念与清谈。"
+title: "泛舟偶记"
+author: "tyfulcrum"
+description: "不痛不痒的生活记忆。"
 keywords: ""
-biography: "不愿被标签化的无业游民。"
+biography: "24岁，是学生。<br>高性能计算方向在读，性好摸鱼。"
 colophon: "若无说明，本站原创内容均以<a href='https://creativecommons.org/licenses/by/4.0/'>知识共享许可署名协议（CC BY 4.0）</a>发布。"
 techinfo: "本站托管于<a href='https://pages.github.com/'>Github Pages</a>并基于<a href='https://jekyllrb.com/'>Jekyll</a>模板<a href='https://github.com/hugoferreira/papyrus-theme'>Papyrus</a>搭建。"
 privacy: "本站使用了<a href='https://www.google.com/analytics/'>Google Analytics</a>以便我统计信息。如果你认为隐私被侵犯，不妨使用<a href='https://www.eff.org/privacybadger'>隐私獾</a>。"
 baseurl: ""
 url: "https://tyfulcrum.github.io"
 
-email: tyfulcrum@gmail.com
+email: tyfulcrum [at] gmail.com
 twitter_username: tyfulcrum
 mastodon_address: https://pawoo.net/@tyfulcrum
 github_username: tyfulcrum
